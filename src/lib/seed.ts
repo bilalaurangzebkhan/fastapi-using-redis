@@ -266,7 +266,7 @@ countryList.forEach((country) => {
     terms.push({score: 0, member: term + '*'})
 
     const populatedb = async () => {
-        // @ts-expect-error
+        // @ts-expect-error : 'allow-with-comment'
         await redis.zadd("terms", ...terms)
     }
     populatedb()
